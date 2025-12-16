@@ -222,10 +222,10 @@ platforms:
     name: "掘金"
   - id: "github"
     name: "GitHub"
-  - id: "hackernews"
-    name: "Hacker News"
-  - id: "solidot"
-    name: "Solidot"
+  # - id: "hackernews"
+  #   name: "Hacker News"
+  # - id: "solidot"
+  #   name: "Solidot"
   - id: "v2ex"
     name: "V2EX"
   - id: "nowcoder"
@@ -238,6 +238,8 @@ platforms:
     name: "ProductHunt"
   - id: "coolapk"
     name: "酷安"
+ - id: "36kr"
+    name: "36氪"
 
   # === 其他/工具类 ===
   - id: "chongbuluo"
