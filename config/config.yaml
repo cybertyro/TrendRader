@@ -331,7 +331,7 @@ ai_analysis:
   #   - gemini: Google Gemini
   #   - custom: 自定义 OpenAI 兼容接口（需填写完整 base_url）
   provider: "custom"              # 提供商
-  api_key: ""                       # API Key（建议使用环境变量 AI_API_KEY）
+  api_key: "AI_API_KEY"                       # API Key（建议使用环境变量 AI_API_KEY）
 
   model: "deepseek-ai/DeepSeek-V3.2"            # 模型名称
                                     # DeepSeek: deepseek-chat, deepseek-reasoner
