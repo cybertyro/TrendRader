@@ -16,9 +16,11 @@ jobs:
     permissions:
       actions: write
       contents: read
+    env:  # 强制 Node.js 24
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Delete all workflow runs
-        uses: Mattraks/delete-workflow-runs@v2
+        uses: Mattraks/delete-workflow-runs@v3
         with:
           token: ${{ github.token }}
           repository: ${{ github.repository }}
