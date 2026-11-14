@@ -24,89 +24,92 @@ app:
 # name: 显示名称（可自定义，修改后不影响运行）
 # ===============================================================
 platforms:
+  enabled: true                         # 迁移自 v5.0.x（旧版无此开关，默认开启）
+  api_url: ""                            # 留空使用默认热榜 API
+  sources:
   
-  # === 综合新闻媒体类 ===
-  - id: "toutiao"
-    name: "今日头条"
-  - id: "baidu"
-    name: "百度热搜"
-  - id: "thepaper"
-    name: "澎湃新闻"
-  - id: "ifeng"
-    name: "凤凰网"
-  - id: "cankaoxiaoxi"
-    name: "参考消息"
-  - id: "sputniknewscn"
-    name: "卫星通讯社"
-  - id: "kaopu"
-    name: "靠谱新闻"
+    # === 综合新闻媒体类 ===
+    - id: "toutiao"
+      name: "今日头条"
+    - id: "baidu"
+      name: "百度热搜"
+    - id: "thepaper"
+      name: "澎湃新闻"
+    - id: "ifeng"
+      name: "凤凰网"
+    - id: "cankaoxiaoxi"
+      name: "参考消息"
+    - id: "sputniknewscn"
+      name: "卫星通讯社"
+    - id: "kaopu"
+      name: "靠谱新闻"
 
-  # === 财经投资类 ===
-  - id: "wallstreetcn-hot"
-    name: "华尔街见闻 最热"
-  - id: "wallstreetcn-quick"
-    name: "华尔街见闻 快讯"
-  - id: "wallstreetcn-news"
-    name: "华尔街见闻 最新"
-  - id: "cls-hot"
-    name: "财联社热门"
-  - id: "xueqiu"
-    name: "雪球"
-  - id: "fastbull"
-    name: "快讯通"
+    # === 财经投资类 ===
+    - id: "wallstreetcn-hot"
+      name: "华尔街见闻 最热"
+    - id: "wallstreetcn-quick"
+      name: "华尔街见闻 快讯"
+    - id: "wallstreetcn-news"
+      name: "华尔街见闻 最新"
+    - id: "cls-hot"
+      name: "财联社热门"
+    - id: "xueqiu"
+      name: "雪球"
+    - id: "fastbull"
+      name: "快讯通"
 
-  # === 社交/短视频/娱乐类 ===
-  - id: "weibo"
-    name: "微博"
-  - id: "douyin"
-    name: "抖音"
-  - id: "bilibili-hot-search"
-    name: "bilibili 热搜"
-  - id: "tieba"
-    name: "贴吧"
-  - id: "zhihu"
-    name: "知乎"
-  - id: "hupu"
-    name: "虎扑"
+    # === 社交/短视频/娱乐类 ===
+    - id: "weibo"
+      name: "微博"
+    - id: "douyin"
+      name: "抖音"
+    - id: "bilibili-hot-search"
+      name: "bilibili 热搜"
+    - id: "tieba"
+      name: "贴吧"
+    - id: "zhihu"
+      name: "知乎"
+    - id: "hupu"
+      name: "虎扑"
 
-  # === 科技类平台 ===
-  - id: "ithome"
-    name: "IT之家"
-  - id: "juejin"
-    name: "掘金"
-  - id: "github"
-    name: "GitHub"
-  - id: "v2ex"
-    name: "V2EX"
-  - id: "nowcoder"
-    name: "牛客网"
-  - id: "pcbeta"
-    name: "远景论坛"
-  - id: "sspai"
-    name: "少数派"
-  - id: "producthunt"
-    name: "ProductHunt"
-  - id: "coolapk"
-    name: "酷安"
-  - id: "36kr"
-    name: "36氪"
-  - id: "tencent-hot"
-    name: "腾讯新闻 综合早报"
-  - id: "cls-telegraph"
-    name: "财联社 电报"  
-  - id: "cls-depth"
-    name: "财联社 深度"
+    # === 科技类平台 ===
+    - id: "ithome"
+      name: "IT之家"
+    - id: "juejin"
+      name: "掘金"
+    - id: "github"
+      name: "GitHub"
+    - id: "v2ex"
+      name: "V2EX"
+    - id: "nowcoder"
+      name: "牛客网"
+    - id: "pcbeta"
+      name: "远景论坛"
+    - id: "sspai"
+      name: "少数派"
+    - id: "producthunt"
+      name: "ProductHunt"
+    - id: "coolapk"
+      name: "酷安"
+    - id: "36kr"
+      name: "36氪"
+    - id: "tencent-hot"
+      name: "腾讯新闻 综合早报"
+    - id: "cls-telegraph"
+      name: "财联社 电报"  
+    - id: "cls-depth"
+      name: "财联社 深度"
 
 
 
-# ===============================================================
-# 3. 数据源 - RSS 订阅
-#
-# 与热榜数据分开存储，按时间流展示
-# 每个源配置：id(唯一标识)、name(显示名称)、url(订阅地址)
-# enabled: 可选，默认 true
-# max_age_days: 可选，覆盖全局 freshness_filter.max_age_days
-# ===============================================================
+  # ===============================================================
+  # 3. 数据源 - RSS 订阅
+  #
+  # 与热榜数据分开存储，按时间流展示
+  # 每个源配置：id(唯一标识)、name(显示名称)、url(订阅地址)
+  # enabled: 可选，默认 true
+  # max_age_days: 可选，覆盖全局 freshness_filter.max_age_days
+  # ===============================================================
 rss:
   enabled: true                       # 是否启用 RSS 抓取
 
@@ -409,3 +412,8 @@ advanced:
     slack: 4000
   batch_send_interval: 3              # 批次发送间隔（秒）
   feishu_message_separator: "━━━━━━━━━━━━━━━━━━━"
+
+# ── v6.11.0 新增：统一调度（保持旧版「不限制推送时间窗」的行为）──
+schedule:
+  enabled: false                       # false = 全天候推送，等价于旧 push_window.enabled: false
+  preset: "always_on"
