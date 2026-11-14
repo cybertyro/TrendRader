@@ -144,10 +144,10 @@ rss:
       url: "https://www.landian.news/feed"
       # max_age_days: 7               # 示例：推送7天内的文章（更新较慢的博客）
     
-    - id: "yahoo-finance"
-      name: "雅虎财经"
-      url: "https://finance.yahoo.com/news/rssindex"
-      enabled: false                  # 禁用
+    - id: "52pojie"
+      name: "吾爱破解"
+      url: "https://www.52pojie.cn/forum.php?mod=rss"
+    #  enabled: false                  # 禁用
 
     # 自定义源示例
     # - id: "custom-feed"
